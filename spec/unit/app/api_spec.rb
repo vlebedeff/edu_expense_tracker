@@ -1,9 +1,11 @@
 require 'rack/test'
-require_relative '../../../app/api'
+require 'app/api'
+require 'spec/support/web'
 
 module ExpenseTracker
   RSpec.describe API do
     include Rack::Test::Methods
+    include Support::Web
 
     def app
       API.new(ledger: ledger)

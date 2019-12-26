@@ -16,10 +16,12 @@
 
 ENV['RACK_ENV'] = 'test'
 
-require './spec/support'
+$LOAD_PATH << File.expand_path('../', __dir__)
 
 RSpec.configure do |config|
-  config.include Support
+  config.when_first_matching_example_defined(:db) do
+    require 'spec/support/db'
+  end
 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest

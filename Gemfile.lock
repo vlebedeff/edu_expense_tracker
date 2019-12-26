@@ -22,11 +22,13 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.0)
+    sequel (5.27.0)
     sinatra (2.0.7)
       mustermann (~> 1.0)
       rack (~> 2.0)
       rack-protection (= 2.0.7)
       tilt (~> 2.0)
+    sqlite3 (1.4.2)
     tilt (2.0.10)
 
 PLATFORMS
@@ -36,7 +38,9 @@ DEPENDENCIES
   coderay
   rack-test
   rspec
+  sequel
   sinatra
+  sqlite3
 
 BUNDLED WITH
    2.1.1
